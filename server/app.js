@@ -4,6 +4,10 @@ const app = express()
 const PORT = 5000
 const {MONGOURI} = require('./keys')
 
+//Using the created model in our app
+require('./models/user')
+mongoose.model("User")
+
 //Connecting to DB
 mongoose.connect(MONGOURI,{
     //Warnings in console
